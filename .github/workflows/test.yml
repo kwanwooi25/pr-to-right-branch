@@ -8,4 +8,4 @@ jobs:
       - name: Check Branches on PR
         uses: kwanwooi25/pr-to-right-branch@v0.1
         with:
-          repoToken: ${{ secrets.REPO_TOKEN }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
