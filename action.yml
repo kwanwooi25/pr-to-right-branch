@@ -2,7 +2,7 @@ name: PR to right branch
 
 author: steven.jeong
 
-description: Make sure your PR is merged to the right branch
+description: Make sure your PR is merged into the right branch
 
 inputs:
   githubToken:
