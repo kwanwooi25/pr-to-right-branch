@@ -1,0 +1,33 @@
+{
+  "name": "pr-to-right-branch",
+  "version": "0.1",
+  "description": "Make sure your PR is merged to the right branch",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build src/index.ts -o lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwanwooi25/pr-to-right-branch.git"
+  },
+  "keywords": [
+    "git-flow",
+    "pull-request",
+    "pr",
+    "branching"
+  ],
+  "author": "steven.jeong<kwanwoo.jeong@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kwanwooi25/pr-to-right-branch/issues"
+  },
+  "homepage": "https://github.com/kwanwooi25/pr-to-right-branch#readme",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.3",
+    "typescript": "^4.6.2"
+  }
+}

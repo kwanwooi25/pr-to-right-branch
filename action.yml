@@ -1,0 +1,36 @@
+name: PR to right branch
+
+author: steven.jeong
+
+description: Make sure your PR is merged to the right branch
+
+inputs:
+  repoToken:
+    description: Github Token that has access to `repo`
+    required: true
+  mainBranch:
+    description: Branch name for production releases
+    default: main
+  devBranch:
+    description: Branch name for development
+    default: develop
+  featureBranch:
+    description: Branch name prefix for feature
+    default: feature
+  releaseBranch:
+    description: Branch name prefix for release
+    default: release
+  hotfixBranch:
+    description: Branch name prefix for hotfix
+    default: hotfix
+  prefixSeparator:
+    description: Branch name prefix separator
+    default: /
+
+runs:
+  using: 'node16'
+  main: 'lib/index.js'
+
+branding:
+  icon: 'git-pull-request'
+  color: 'green'
