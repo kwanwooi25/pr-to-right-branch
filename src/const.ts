@@ -12,6 +12,7 @@ export const bgColors = {
 };
 
 export const styles = {
+  default: '\u001b[0m',
   bold: '\u001b[1m',
   italic: '\u001b[3m',
   underline: '\u001b[4m',
