@@ -1,7 +1,7 @@
 import { info, setFailed } from '@actions/core';
 import { context } from '@actions/github';
 
-import { colors, styles } from './const';
+import { bgColors, colors, styles } from './const';
 import { switchBranch } from './switchBranch';
 import { validateBranches } from './validateBranches';
 
@@ -40,7 +40,7 @@ declare const process: {
     await switchBranch(correctBaseBranch);
 
     info(
-      `${colors.green}✅ Base branch switched from ${styles.bold}${baseBranch}${styles.default} to ${styles.bold}${correctBaseBranch}${styles.default} 🎉`,
+      `${colors.green}✅ Base branch switched from ${colors.white}${bgColors.red}${styles.bold}${baseBranch}${styles.default}${colors.green} to ${colors.white}${bgColors.green}${styles.bold}${correctBaseBranch}${styles.default} 🎉`,
     );
   } catch (error: any) {
     setFailed(error.message);
