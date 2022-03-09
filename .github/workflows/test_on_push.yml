@@ -6,6 +6,6 @@ jobs:
     name: Checking PR branches
     steps:
       - name: Checking PR branches
-        uses: kwanwooi25/pr-to-right-branch@v0.1
+        uses: kwanwooi25/pr-to-right-branch@v0.2
         with:
           repoToken: ${{ secrets.REPO_TOKEN }}
