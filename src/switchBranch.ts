@@ -24,13 +24,15 @@ export const switchBranch = async ({ from, to }: Args) => {
     base: to,
   });
 
+  const reviewBody =
+    '🚫 This PR was heading to wrong direction. Base branch switched from `' +
+    from +
+    '` to `' +
+    to +
+    '` automatically. 🤗';
+
   await octokit.rest.pulls.createReview({
     ...payload,
-    body:
-      '🚫 This PR was heading to wrong direction. Base branch switched from `' +
-      from +
-      '` to `' +
-      to +
-      '` automatically. 🤗',
+    body: reviewBody,
   });
 };
