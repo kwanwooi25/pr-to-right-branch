@@ -1,0 +1,11 @@
+on: [pull_request]
+
+jobs:
+  check_branches_on_pr:
+    runs-on: ubuntu-latest
+    name: Check Branches on PR
+    steps:
+      - name: Check Branches on PR
+        uses: kwanwooi25/pr-to-right-branch@v0.2
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
