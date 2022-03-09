@@ -1,6 +1,6 @@
 {
   "name": "pr-to-right-branch",
-  "version": "0.2",
+  "version": "0.2.1",
   "description": "Make sure your PR is merged to the right branch",
   "main": "index.js",
   "scripts": {
