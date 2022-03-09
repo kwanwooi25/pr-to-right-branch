@@ -1,13 +1,8 @@
 import { getInput, setFailed } from '@actions/core';
 import { context, getOctokit } from '@actions/github';
 
-interface Args {
-  from: string;
-  to?: string;
-}
-
-export const switchBranch = async ({ from, to }: Args) => {
-  if (!to) {
+export const switchBranch = async (correctBaseBranch?: string) => {
+  if (!correctBaseBranch) {
     setFailed('Need a correct base branch to switch');
   }
 
@@ -21,18 +16,6 @@ export const switchBranch = async ({ from, to }: Args) => {
 
   await octokit.rest.pulls.update({
     ...payload,
-    base: to,
-  });
-
-  const reviewBody =
-    '🚫 This PR was heading to wrong direction. Base branch switched from`' +
-    from +
-    '` to `' +
-    to +
-    '` automatically. 🤗';
-
-  await octokit.rest.pulls.createReview({
-    ...payload,
-    body: reviewBody,
+    base: correctBaseBranch,
   });
 };
