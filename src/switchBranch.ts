@@ -11,7 +11,7 @@ export const switchBranch = async ({ from, to }: Args) => {
     throw new Error('Need a correct base branch to switch');
   }
 
-  const repoToken = getInput('repo-token', { required: true });
+  const repoToken = getInput('repoToken', { required: true });
   const octokit = getOctokit(repoToken);
   const payload = {
     owner: context.repo.owner,
