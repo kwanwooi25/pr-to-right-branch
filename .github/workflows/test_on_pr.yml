@@ -1,15 +1,3 @@
-on: [push]
-
-jobs:
-  check_pr_branches:
-    runs-on: ubuntu-latest
-    name: Checking PR branches
-    steps:
-      - name: Checking PR branches
-        uses: kwanwooi25/pr-to-right-branch@v0.1
-        with:
-          repoToken: ${{ secrets.REPO_TOKEN }}
-
 on: [pull_request]
 
 jobs:
